@@ -4,7 +4,10 @@ void main() {
   runApp(const MyApp());
 }
 
+// ============================================================
 // APLICACIÓN
+// ============================================================
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -21,6 +24,10 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+// ============================================================
+// PANTALLA PRINCIPAL
+// ============================================================
 
 class AddMoneyPage extends StatelessWidget {
   const AddMoneyPage({super.key});
@@ -40,6 +47,10 @@ class AddMoneyPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+
+              // ------------------------------------------------
+              // ENCABEZADO
+              // ------------------------------------------------
 
               Row(
                 children: [
@@ -131,6 +142,10 @@ class AddMoneyPage extends StatelessWidget {
 
               const SizedBox(height: 28),
 
+              // ------------------------------------------------
+              // TÍTULO
+              // ------------------------------------------------
+
               const Text(
                 'Agregar dinero a Neobank',
                 style: TextStyle(
@@ -140,6 +155,10 @@ class AddMoneyPage extends StatelessWidget {
               ),
 
               const SizedBox(height: 12),
+
+              // ------------------------------------------------
+              // OPCIONES
+              // ------------------------------------------------
 
               opcion(
                 icono: Icons.attach_money,
@@ -168,6 +187,10 @@ class AddMoneyPage extends StatelessWidget {
   }
 }
 
+// ============================================================
+// TARJETA
+// ============================================================
+
 Widget tarjeta({
   required Color color,
   required String tipo,
@@ -175,14 +198,14 @@ Widget tarjeta({
   required bool activa,
 }) {
   return Container(
-    width: 92,
+    width: 150,
     padding: const EdgeInsets.all(10),
 
     decoration: BoxDecoration(
       color: color,
       borderRadius: BorderRadius.circular(17),
 
-      // tarjeta seleccionada
+      // Borde más grueso para la tarjeta seleccionada
       border: activa
           ? Border.all(
               color: Colors.black,
@@ -208,7 +231,7 @@ Widget tarjeta({
       ),
     ),
 
-    if (tipo == 'Tarjeta de credito')
+    if (tipo == 'Credit card')
       const Text(
         'VISA',
         style: TextStyle(
@@ -246,6 +269,10 @@ Widget tarjeta({
   );
 }
 
+// ============================================================
+// OPCIONES DE AGREGAR DINERO
+// ============================================================
+
 Widget opcion({
   required IconData icono,
   required String texto,
@@ -276,6 +303,7 @@ Widget opcion({
 
         const SizedBox(width: 12),
 
+        // Texto
         Expanded(
           child: Text(
             texto,
