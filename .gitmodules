@@ -1,0 +1,4 @@
+[submodule "entregas/S09/arquitectura/inkash"]
+	path = entregas/S09/arquitectura/inkash
+	url = https://github.com/Demybrictany/Programacion-de-dispositivos.git
+	branch = inkash-main
