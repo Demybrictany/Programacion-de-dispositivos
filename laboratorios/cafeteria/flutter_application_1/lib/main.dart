@@ -12,17 +12,14 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int puntosA = 0;
-  int puntosB = 0;
-  String resultado(){
-    if (puntosA > puntosB) {
-      return 'Equipo xelaju gana';
-    } else if (puntosB > puntosA) {
-      return 'Equipo 2 gana';
-    } else {
-      return 'Empate';
-    }
-  }
+  int cantidadCafe = 0;
+  int cantidadSandwich = 0;
+  int cantidadJugo = 0;
+  double precioCafe = 10.00;
+  double precioSandwich = 25.00;
+  double precioJugo = 12.00;
+
+
   @override
   Widget build(BuildContext context) {
     
@@ -61,9 +58,8 @@ class _MyAppState extends State<MyApp> {
                   ElevatedButton(
                     onPressed: () {
                     setState(() {
-                    puntosA++;  
-
-              });
+                cantidadCafe++;
+});
               },
                 child: Text('+1'),
               ),
@@ -71,8 +67,8 @@ class _MyAppState extends State<MyApp> {
               ElevatedButton(
                 onPressed: () {
                   setState(() {
-                    if (puntosA > 0) {
-                      puntosA--;
+                    if (cantidadCafe > 0) {
+                      cantidadCafe--;
                     }
                   });
                 },
